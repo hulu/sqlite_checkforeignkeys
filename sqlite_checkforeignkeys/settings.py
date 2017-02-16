@@ -77,8 +77,8 @@ WSGI_APPLICATION = 'sqlite_checkforeignkeys.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sqlite_checkforeignkeys_engine',
+        'NAME': ':memory:',
     }
 }
 
