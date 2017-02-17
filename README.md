@@ -5,4 +5,4 @@ This references the django sqlite engine and overrides one of its methods. When 
 
 There is a test that tests this specific behavior, built using pytest. Changing engines to the base sqlite engine causes the test to fail
 
-To use this in your own project, add the engine app folder into your project, and change your database engine to the new engine.
+This package supports setup.py, to use it, install the package, then change your database engine to: 'sqlite_checkforeignkeys_engine'
