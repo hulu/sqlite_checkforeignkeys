@@ -1,11 +1,31 @@
 # sqlite_checkforeignkeys
 A sqlite engine that checks foreign keys
 
-## Database Engine
+## What it is
 
 This references the django sqlite engine and overrides one of its methods. When a new connection is created it [turns on the foreign key checking as per the sqlite documentation](http://www.sqlite.org/foreignkeys.html)
 
-This package supports setup.py, to use it, install the package, then change your database engine to: `sqlite_checkforeignkeys_engine`
+## Installing
+
+### `pip`
+
+This package is available through pypi
+
+    pip install sqlite_checkforeignkeys
+
+### `setup.py`
+
+Or you can download the repo, and install it using
+
+    ./setup.py install
+
+## Configuring
+
+### django
+
+It's as simple as changing your database engine to: `sqlite_checkforeignkeys_engine`
+
+### pytest
 
 There is also a weirdness in pytest where it doesn't know that this is actually sqlite, so if you want to run an in-memory DB for tests, you'll need to specify the in-memory DB manually. Which means that for a test config, your `DATABASES` assignment will probably look like this:
 

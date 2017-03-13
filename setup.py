@@ -12,6 +12,7 @@ setup(
     description='A sqlite engine that checks foreign keys',
     keywords=['foreign key', 'sqlite'],
     packages=['sqlite_checkforeignkeys_engine'],
+    url='https://github.com/hulu/sqlite_checkforeignkeys',
     long_description=
     'This references the django sqlite engine and overrides one of its methods. '
     'When a new connection is created it [turns on the foreign key checking as per the sqlite '
